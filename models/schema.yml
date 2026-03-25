@@ -1,0 +1,76 @@
+version: 2
+
+sources:
+  - name: spotify
+    schema: tracks
+    tables:
+      - name: raw_tracks
+        identifier: tracks
+        description: Raw Spotify tracks data
+
+        columns:
+          - name: date_date
+            description: Date of the track record
+
+          - name: id
+            description: Unique track ID
+            tests: 
+              - unique
+              - not_null
+
+          - name: name
+            description: Track name
+
+          - name: popularity
+            description: Popularity score
+
+          - name: duration_ms
+            description: Duration in milliseconds
+
+          - name: explicit
+            description: Explicit content flag
+
+          - name: artists
+            description: Artist names
+
+          - name: id_artists
+            description: Artist IDs
+
+          - name: release_date
+            description: Release date of the track
+
+          - name: danceability
+            description: Danceability score
+
+          - name: energy
+            description: Energy level
+
+          - name: key
+            description: Musical key
+
+          - name: loudness
+            description: Loudness in dB
+
+          - name: mode
+            description: Mode (major/minor)
+
+          - name: speechiness
+            description: Speechiness measure
+
+          - name: acousticness
+            description: Acousticness score
+
+          - name: instrumentalness
+            description: Instrumentalness score
+
+          - name: liveness
+            description: Liveness score
+
+          - name: valence
+            description: Valence (positivity)
+
+          - name: tempo
+            description: Tempo (BPM)
+
+          - name: time_signature
+            description: Time signature
