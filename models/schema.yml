@@ -77,13 +77,31 @@ sources:
           - name: time_signature
             description: Time signature
 
+      - name: artist
+        identifier: artists
+        description: Spotify artist data
+        columns:
+            
+          - name: id
+            description: Unique track ID
+            tests:
+              - unique
+              - not_null
+
+          - name: followers
+            description: Count of followers
+          
+          - name: genres
+            description: Genres of artist
+          
+          - name: name
+            description: Artist name
+
+          - name: popularity
+            description: Artist's popularity
 
 models:
   - name: stg_tracks
     description: "Spotify track verisinin staging modeli"
-
-    columns:
-      - name: track_id
-        tests:
-          - not_null
-          - unique
+  - name: stg_artist
+    description: "Spotify artist verisinin staging modeli"
