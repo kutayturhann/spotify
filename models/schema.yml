@@ -34,7 +34,7 @@ sources:
             description: Artist names
 
           - name: id_artists
-            description: Artist IDs11
+            description: Artist IDs
 
           - name: release_date
             description: Release date of the track
