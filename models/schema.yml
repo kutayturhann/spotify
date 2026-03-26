@@ -106,6 +106,20 @@ sources:
         columns:          
           - name: genres
             description: Genres of artist
+
+          - name: followers
+            description: Count of followers
+      
+      - name: genres_tracks
+        identifier: genres_tracks
+        columns:
+          - name: track_genre
+            description: track_genre
+            
+          - name: id
+            description: id
+
+
 models:
   - name: stg_tracks
     description: "Spotify track verisinin staging modeli"

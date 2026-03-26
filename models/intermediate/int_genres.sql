@@ -1,3 +1,4 @@
+
 with base as (
   select
     cast(followers as int64) as followers,
@@ -18,3 +19,4 @@ select
   sum(weighted_followers) as weighted_total_followers
 from exploded
 group by genre
+order by weighted_total_followers DESC
